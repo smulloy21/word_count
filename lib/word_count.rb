@@ -4,7 +4,7 @@ class String
 		small_word = word.downcase()
 		count = 0
 		output = ""
-		exceptions = ["'s", "'d", "'ve", "'re", "'m", "ll"]
+		exceptions = ["'s", "'d", "'ve", "'re", "'m", "ll", "n't"]
 		sentence.each() do |wd|
 			if wd == small_word 
 				count += 1

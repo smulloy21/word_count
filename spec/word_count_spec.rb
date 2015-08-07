@@ -23,4 +23,7 @@ describe('String#word_count')  do
 	it("outputs 'twice' when count = 2") do
 		expect("What's love got to do, got to do with it?".word_count("do")).to(eq("occurs twice"))
 	end
+	it("outputs handles contractions") do
+		expect("we shouldn't go in there".word_count("should")).to(eq("occurs once"))
+	end
 end
