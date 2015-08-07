@@ -4,9 +4,15 @@ class String
 		small_word = word.downcase()
 		count = 0
 		output = ""
+		exceptions = ["'s", "'d", "'ve", "'re", "'m", "ll"]
 		sentence.each() do |wd|
-			if wd == small_word || wd == small_word + "'s" || wd == small_word + "'d" || wd == small_word + "'ve" || wd == small_word + "'re" || wd == small_word + "'m" || wd == small_word + "'ll"
+			if wd == small_word 
 				count += 1
+			end
+			exceptions.each() do |contraction|
+				if wd == small_word + contraction
+					count += 1
+				end
 			end
 		end
 		if count > 0
