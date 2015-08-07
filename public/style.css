@@ -1,0 +1,121 @@
+html {
+	height: 100%;
+}
+
+body {
+	text-align: center;
+	font-family: helvetica;
+	height: 100%;
+	background-color: #428bca;
+}
+
+.container {
+	background-color: #e5e5e5;
+	border-radius: 20px;
+	margin: 2rem auto 2rem auto;
+	min-height: 90%;
+	width: 85%;
+	padding: 2em 4em;
+}
+
+h1 {
+	font-size: 4em;
+	margin-bottom: .5em;
+	font-weight: 200;
+}
+
+h2 {
+	font-weight: 200;
+	font-size: 2.5em;
+}
+
+h3 {
+	font-size: 2em;
+	margin-bottom: 1em;
+	font-weight: 200;
+}
+
+label, input, textarea {
+	font-size: 2em;
+	font-weight: 200;
+	margin-bottom: .5em;
+	font-color: black;
+}
+input[type="text"] {
+  font-size: 1.5em;
+  height: 2em;
+}
+
+form {
+	width: 65%;
+	margin: 0 auto;
+}
+
+textarea[type="text"] {
+	height: 4rem;
+	font-size: 1.5em;
+}
+
+div.form-group input#word {
+	width: 30%;
+	margin: 0 auto;
+	font-size: 1.5em;
+  height: 2em;
+}
+
+button {
+	margin: 1em auto;
+}
+
+a:hover {
+	font-color: #428bca;
+}
+
+h4 {
+	margin-top: 2em;
+	font-weight: 200;
+	font-size: 2em;
+	font-color: #428bca;
+}
+@media (max-width: 750px) {
+	h1 {
+		font-size: 3.25em;
+	}
+}
+@media (max-width: 675px) {
+	.container {
+		width: 90%;
+		padding: 1em;
+	}
+}
+@media (max-width: 600px) {
+	.container {
+		width: 100%;
+		min-height: 100%;
+		border-radius: 0;
+		margin: 0;
+	}
+	div.form-group input#word {
+	width: 40%;
+	}
+	form {
+	width: 70%;
+	}
+}
+@media (max-width: 480px) {
+	.container {
+		padding: .75em;
+	}
+	h2 {
+		font-size: 2em;
+	}
+	h3 {
+		font-size: 1.75em;
+	}
+	h4 {
+		font-size: 1.6em;
+	}
+	div.form-group input#word {
+	width: 50%;
+	}
+}

@@ -1,14 +1,15 @@
-<h1>Count instances of a word in a sentence!</h1>
+<h1>Word Count</h1>
+<h3>Count the number of times a particular word occurs in a given text.</h3>
 <form action="/word_count">
   <div class="form-group">
-    <label for="sentence">Enter a sentence:
+    <label for="text">Enter your text:
     </label>
-    <input id="sentence" name="sentence" class="form-control" type="text">
+    <textarea id="text" name="text" class="form-control" type="text"></textarea>
   </div>
   <div class="form-group">
-    <label for="word">Enter a word:
+    <label for="word">Enter a word to check:
     </label>
     <input id="word" name="word" class="form-control" type="text">
   </div>
-  <button type="submit" class="btn-success">Send</button>
+  <button type="submit" class="btn btn-primary" style="font-family: helvetica; font-size: 1.3em; font-weight: 200;">Search</button>
 </form>
