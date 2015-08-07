@@ -11,12 +11,16 @@ class String
 		end
 		if count > 0
 			if count > 1
-				output = "\"" + word.capitalize() + "\" occurs in \"" + self + "\" " + count.to_s + " times."
+				if count > 2
+					output = "occurs " + count.to_s + " times"
+				else
+					output = "occurs twice"
+				end
 			else
-				output = "\"" + word.capitalize() + "\" occurs in \"" + self + "\" " + count.to_s + " time."
+				output = "occurs once"
 			end
 		else
-			output = "\"" + word.capitalize() + "\" does not occur in \"" + self + "\""
+			output = "does not occur"
 		end
 		output
 	end
