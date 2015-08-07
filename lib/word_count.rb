@@ -4,12 +4,12 @@ class String
 		small_word = word.downcase()
 		count = 0
 		output = ""
-		exceptions = ["'s", "'d", "'ve", "'re", "'m", "ll", "n't"]
+		contractions = ["'s", "'d", "'ve", "'re", "'m", "ll", "n't"]
 		sentence.each() do |wd|
 			if wd == small_word 
 				count += 1
 			end
-			exceptions.each() do |contraction|
+			contractions.each() do |contraction|
 				if wd == small_word + contraction
 					count += 1
 				end
