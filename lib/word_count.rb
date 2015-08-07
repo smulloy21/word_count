@@ -1,6 +1,6 @@
 class String
 	define_method(:word_count) do |word|
-		sentence = self.downcase().gsub(/[,.!?:;]/, "").gsub.split(" ")
+		sentence = self.downcase().gsub(/[,.!?:;()/]/, "").gsub.split(" ")
 		small_word = word.downcase()
 		count = 0
 		output = ""
