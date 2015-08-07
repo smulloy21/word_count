@@ -8,6 +8,8 @@
 
 In response to user input of a text and a word, the app will report the number of times the word appears in the text.
 
+link to app on heroku: https://word-count-epic.herokuapp.com/
+
 ## Setup
 
 * Download from GitHub and run

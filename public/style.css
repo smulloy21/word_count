@@ -1,14 +1,12 @@
 html {
 	height: 100%;
 }
-
 body {
 	text-align: center;
 	font-family: helvetica;
 	height: 100%;
-	background-color: #428bca;
+	background-color: #327bba;
 }
-
 .container {
 	background-color: #e5e5e5;
 	border-radius: 20px;
@@ -17,65 +15,47 @@ body {
 	width: 85%;
 	padding: 2em 4em;
 }
-
 h1 {
 	font-size: 4em;
 	margin-bottom: .5em;
 	font-weight: 200;
 }
-
 h2 {
 	font-weight: 200;
 	font-size: 2.5em;
 }
-
 h3 {
 	font-size: 2em;
 	margin-bottom: 1em;
 	font-weight: 200;
 }
-
+h4 {
+	margin-top: 2em;
+	font-weight: 200;
+	font-size: 2em;
+}
+form {
+	width: 65%;
+	margin: 0 auto;
+}
 label, input, textarea {
 	font-size: 2em;
 	font-weight: 200;
 	margin-bottom: .5em;
 	font-color: black;
 }
-input[type="text"] {
-  font-size: 1.5em;
-  height: 2em;
-}
-
-form {
-	width: 65%;
-	margin: 0 auto;
-}
-
 textarea[type="text"] {
 	height: 4rem;
 	font-size: 1.5em;
 }
-
 div.form-group input#word {
 	width: 30%;
 	margin: 0 auto;
 	font-size: 1.5em;
   height: 2em;
 }
-
 button {
 	margin: 1em auto;
-}
-
-a:hover {
-	font-color: #428bca;
-}
-
-h4 {
-	margin-top: 2em;
-	font-weight: 200;
-	font-size: 2em;
-	font-color: #428bca;
 }
 @media (max-width: 750px) {
 	h1 {
