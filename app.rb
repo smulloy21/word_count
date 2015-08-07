@@ -10,6 +10,6 @@ end
 get('/word_count') do
   @sentence = params.fetch('sentence')
   @word = params.fetch('word')
-  @answer = @sentence.anagrams?(@word)
+  @answer = @sentence.word_count(@word)
   erb(:word_count)
 end
