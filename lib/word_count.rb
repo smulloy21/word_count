@@ -5,7 +5,7 @@ class String
 		count = 0
 		output = ""
 		sentence.each() do |wd|
-			if wd == small_word || wd == small_word + "'s" || wd == small_word + "'d" || wd == small_word + "'ve"
+			if wd == small_word || wd == small_word + "'s" || wd == small_word + "'d" || wd == small_word + "'ve" || wd == small_word + "'re" || wd == small_word + "'m"
 				count += 1
 			end
 		end
