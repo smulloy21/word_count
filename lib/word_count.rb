@@ -1,15 +1,24 @@
 class String
 	define_method(:word_count) do |word|
-		sentence = self.downcase().gsub(/[,.!?:;()"]/, "").split(" ")
 		small_word = word.downcase()
+		self.downcase!()
 		count = 0
 		output = ""
-		contractions = ["'s", "'d", "'ve", "'re", "'m", "'ll", "n't"]
+		new_self = ""
+		contractions = {"'s" => "is", "'d" => "would", "'ve" => "have", "'re" => "are", "'m" => "am", "'ll" => "will", "n't" => "not"}
+		if contractions.has_value?(small_word)
+			contractions.each_key() do |key| 
+				new_self = self.gsub(key, (" " + contractions.fetch(key)))
+			end
+		else
+			new_self = self
+		end
+		sentence = new_self.gsub(/[,.!?:;()"]/, "").split(" ")
 		sentence.each() do |wd|
 			if wd == small_word 
 				count += 1
 			end
-			contractions.each() do |contraction|
+			contractions.each_key() do |contraction|
 				if wd == small_word + contraction
 					count += 1
 				end
