@@ -1,25 +1,24 @@
+require('pry')
+
 class String
 	define_method(:word_count) do |word|
-		small_word = word.downcase()
-		self.downcase!()
+		word.downcase!()
+		new_self = self.downcase()
 		count = 0
 		output = ""
-		new_self = ""
-		contractions = {"'s" => "is", "'d" => "would", "'ve" => "have", "'re" => "are", "'m" => "am", "'ll" => "will", "n't" => "not"}
-		if contractions.has_value?(small_word)
-			contractions.each_key() do |key| 
-				new_self = self.gsub(key, (" " + contractions.fetch(key)))
+		contractions = {"\'s" => "is", "\'d" => "would", "\'ve" => "have", "\'re" => "are", "\'m" => "am", "\'ll" => "will", "n't" => "not"}
+		contractions.each_key() do |key| 
+			if contractions.fetch(key) == word
+				new_self = new_self.gsub(key, (" " + contractions.fetch(key)))
 			end
-		else
-			new_self = self
 		end
 		sentence = new_self.gsub(/[,.!?:;()"]/, "").split(" ")
 		sentence.each() do |wd|
-			if wd == small_word 
+			if wd == word 
 				count += 1
 			end
 			contractions.each_key() do |contraction|
-				if wd == small_word + contraction
+				if wd == word + contraction
 					count += 1
 				end
 			end

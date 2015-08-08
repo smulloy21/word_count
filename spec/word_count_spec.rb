@@ -29,4 +29,7 @@ describe('String#word_count')  do
 	it("output includes the meanings of contractions") do
 		expect("we shouldn't go in there".word_count("not")).to(eq("occurs once"))
 	end
+	it("output includes the meanings of contractions") do
+		expect("we should've gone in there".word_count("have")).to(eq("occurs once"))
+	end
 end
