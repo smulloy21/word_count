@@ -1,12 +1,14 @@
 # Word Count
 
-##### Counts instances of particular word in a given text, 8/7/15
+##### Counts instances of a particular word in a given text, 8/7/15
 
 #### By _**Shannon Mulloy**_
 
 ## Description
 
-In response to user input of a text and a word, the app will report the number of times the word appears in the text.
+In response to user input of some text and a word, the app will report the number of times the word appears in the text.
+
+The app can interpret contractions, so that "should've" can count as an instance of "should've", "should", or "have". Note, however, that all instances of the contraction "'s" are interpreted as "is" not "has", and all instances of "'d" are interpreted as "would" not "had". 
 
 link to app on heroku: https://word-count-epic.herokuapp.com/
 
